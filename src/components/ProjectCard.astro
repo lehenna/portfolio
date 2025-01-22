@@ -1,0 +1,66 @@
+---
+import CodeIcon from "./icons/CodeIcon.astro";
+import EyeIcon from "./icons/EyeIcon.astro";
+import { type Project } from "../lib/consts";
+import ArrowRightIcon from "./icons/ArrowRightIcon.astro";
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+---
+
+<article class="relative border-2 border-zinc-800 rounded-md p-4">
+  {
+    project.cover ? (
+      <a
+        class="relative block overflow-hidden w-full aspect-video rounded-md mb-2.5"
+        href={project.href.demo ?? project.href.code}
+        target="_blank"
+      >
+        <img
+          class="absolute w-full h-full object-cover transition-transform hover:scale-110"
+          src={project.cover}
+          alt={project.name}
+        />
+      </a>
+    ) : null
+  }
+  <header class="relative mb-2.5 flex justify-between items-center gap-2.5">
+    <a href={project.href.demo ?? project.href.code} target="_blank">
+      <h4
+        class="text-lg font-medium text-white flex items-center gap-0.5 hover:gap-2.5 uppercase transition-[gap]"
+      >
+        {project.name}
+        <span class="text-green-500 text-2xl">
+          <ArrowRightIcon />
+        </span>
+      </h4>
+    </a>
+    {
+      project.href.code ? (
+        <a
+          class="flex items-center gap-2 border-2 border-zinc-800 rounded-md px-2 h-8 transition-[background-color] hover:bg-zinc-800/50"
+          href={project.href.code}
+          target="_blank"
+        >
+          <span class="text-sm text-zinc-400">
+            <CodeIcon />
+          </span>
+          <span class="text-xs">CODE</span>
+        </a>
+      ) : null
+    }
+  </header>
+  <p class="text-sm mb-2.5">{project.description}</p>
+  <ul class="flex items-center gap-2 flex-wrap">
+    {
+      project.keywords.map((keyword) => (
+        <li class="text-xs font-mono text-green-600 border border-green-600 rounded-md px-2 h-6 grid place-items-center">
+          {keyword}
+        </li>
+      ))
+    }
+  </ul>
+</article>

@@ -1,0 +1,31 @@
+---
+import { socialLinks } from "../lib/consts";
+import SocialLinks from "./SocialLinks.astro";
+---
+
+<div class="relative min-h-hero w-full grid place-items-center px-8 py-24">
+  <section class="relative w-full max-w-3xl">
+    <h2 class="text-xl md:text-2xl font-bold text-zinc-500 mb-1.5">
+      Hola👋, Soy
+    </h2>
+    <h1 class="text-5xl md:text-6xl font-bold mb-4">Lehenna</h1>
+    <h3 class="text-xl md:text-2xl font-medium mb-4">
+      Y soy un <span class="text-green-500">Full Stack Developer</span>
+    </h3>
+    <p class="text-zinc-300 md:text-lg mb-8">
+      Llevo 3 años desarrollando con JavaScript y TypeScript y disfruto creando
+      y contribuyendo a proyectos por y para la comunidad.
+    </p>
+    <p class="relative text-lg md:text-xl flex items-center gap-2 mb-8">
+      Contáctame en
+      <a
+        class="relative before:-z-10 px-1 grid place-items-center before:content-[' '] before:absolute before:bottom-0 before:h-full before:w-full before:max-h-[2px] hover:before:max-h-[2rem] before:transition-[max-height] before:duration-300 before:bg-green-500 pb-0.5"
+        target="_blank"
+        href={socialLinks.contact}
+      >
+        hello@lehenna.com
+      </a>
+    </p>
+    <SocialLinks />
+  </section>
+</div>

@@ -1,0 +1,42 @@
+---
+import Section from "./Section.astro";
+import SectionContent from "./SectionContent.astro";
+import SectionTitle from "./SectionTitle.astro";
+---
+
+<Section id="skills">
+  <SectionTitle>Habilidades</SectionTitle>
+  <SectionContent>
+    <div class="grid grid-cols-3 gap-4">
+      <article>
+        <h3 class="font-medium text-white mb-2.5">LENGUAJES</h3>
+        <ul class="flex flex-col gap-1">
+          <li class="text-zinc-400 text-sm">JavaScript</li>
+          <li class="text-zinc-400 text-sm">TypeScript</li>
+          <li class="text-zinc-400 text-sm">HTML</li>
+          <li class="text-zinc-400 text-sm">CSS/Sass</li>
+          <li class="text-zinc-400 text-sm">SQL</li>
+        </ul>
+      </article>
+      <article>
+        <h3 class="font-medium text-white mb-2.5">FRAMEWORKS</h3>
+        <ul class="flex flex-col gap-1">
+          <li class="text-zinc-400 text-sm">Node</li>
+          <li class="text-zinc-400 text-sm">Bun</li>
+          <li class="text-zinc-400 text-sm">React</li>
+          <li class="text-zinc-400 text-sm">Tailwind</li>
+          <li class="text-zinc-400 text-sm">Astro</li>
+        </ul>
+      </article>
+      <article>
+        <h3 class="font-medium text-white mb-2.5">HERRAMIENTAS</h3>
+        <ul class="flex flex-col gap-1">
+          <li class="text-zinc-400 text-sm">Prisma ORM</li>
+          <li class="text-zinc-400 text-sm">Mongo DB</li>
+          <li class="text-zinc-400 text-sm">Mongoose</li>
+          <li class="text-zinc-400 text-sm">Postman</li>
+        </ul>
+      </article>
+    </div>
+  </SectionContent>
+</Section>

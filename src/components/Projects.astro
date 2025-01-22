@@ -1,0 +1,23 @@
+---
+import Section from "./Section.astro";
+import SectionContent from "./SectionContent.astro";
+import SectionTitle from "./SectionTitle.astro";
+import ProjectCard from "./ProjectCard.astro";
+import ArrowRightIcon from "./icons/ArrowRightIcon.astro";
+import { socialLinks, projects } from "../lib/consts";
+---
+
+<Section id="projects">
+  <SectionTitle>Proyectos</SectionTitle>
+  <SectionContent>
+    {projects.map((project) => <ProjectCard project={project} />)}
+    <a
+      class="relative h-10 flex items-center justify-between border-2 border-zinc-800 transition-[border-color,color] hover:text-white hover:border-green-500 rounded-md p-4 gap-2.5 w-min whitespace-nowrap"
+      href={socialLinks.github}
+      target="_blank"
+    >
+      <span class="text-sm">MAS PROYECTOS</span>
+      <ArrowRightIcon />
+    </a>
+  </SectionContent>
+</Section>

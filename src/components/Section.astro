@@ -1,0 +1,13 @@
+---
+interface Props {
+  id: string;
+}
+
+const { id } = Astro.props;
+---
+
+<div class="relative w-full grid place-items-center px-8 py-28">
+  <section id={id} class="relative w-full max-w-3xl grid md:grid-cols-7">
+    <slot />
+  </section>
+</div>

@@ -1,0 +1,20 @@
+---
+import Footer from "../components/Footer.astro";
+import Navbar from "../components/Navbar.astro";
+---
+
+<!doctype html>
+<html class="scroll-smooth" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Hi, I'm Lehenna.</title>
+  </head>
+  <body class="relative bg-zinc-900 text-white pt-20">
+    <Navbar />
+    <slot />
+    <Footer />
+  </body>
+</html>

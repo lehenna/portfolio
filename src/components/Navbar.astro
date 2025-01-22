@@ -1,0 +1,25 @@
+---
+import { socialLinks } from "../lib/consts";
+---
+
+<header
+  class="w-full h-20 bg-zinc-900 fixed top-0 left-0 z-50 border-b border-zinc-800 px-8"
+>
+  <div
+    class="relative mx-auto w-full max-w-3xl h-full flex items-center justify-between"
+  >
+    <a href="/">
+      <h1 class="text-xl font-medium flex">
+        <span class="text-green-500">{"<"}</span>
+        <span class="mr-1">Lehenna</span>
+        <span class="text-green-500">{"/>"}</span>
+      </h1>
+    </a>
+    <a
+      class="relative bg-green-500 hover:bg-green-600 transition-[background-color] grid place-items-center text-sm font-medium rounded-full h-8 px-4"
+      href={socialLinks.contact}
+    >
+      Contact Me
+    </a>
+  </div>
+</header>

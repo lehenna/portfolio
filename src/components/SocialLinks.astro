@@ -1,0 +1,19 @@
+---
+import HeroLink from "./HeroLink.astro";
+import GithubIcon from "./icons/GithubIcon.astro";
+import LinkedInIcon from "./icons/LinkedInIcon.astro";
+import CoffeeIcon from "./icons/CoffeeIcon.astro";
+import { socialLinks } from "../lib/consts";
+---
+
+<div class="inline-flex gap-2.5">
+  <HeroLink href={socialLinks.github}>
+    <GithubIcon />
+  </HeroLink>
+  <HeroLink href={socialLinks.linkedIn}>
+    <LinkedInIcon />
+  </HeroLink>
+  <HeroLink href={socialLinks.coffee}>
+    <CoffeeIcon />
+  </HeroLink>
+</div>
