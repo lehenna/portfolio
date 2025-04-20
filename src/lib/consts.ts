@@ -1,5 +1,5 @@
 export const socialLinks = {
-  linkedIn: "https://www.linkedin.com/in/lehenna",
+  linkedIn: "https://www.linkedin.com/in/lehenna1",
   github: "https://github.com/lehenna",
   contact: "mailto:hello@lehenna.com",
   coffee: "https://buymeacoffee.com/lehenna",
